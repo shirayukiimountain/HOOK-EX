@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="App icon"
+            android:src="@drawable/ic_default_app" />
+
+        <!-- Main Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            android:paddingTop="2dp">
+
+            <!-- Primary Info Row -->
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="?android:attr/textColorPrimary"
+                tools:text="App Name" />
+
+            <!-- Secondary Info Row -->
+            <TextView
+                android:id="@+id/app_package"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="?android:attr/textColorSecondary"
+                tools:text="com.example.package" />
+
+            <!-- Status Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/app_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceLabelSmall"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="2dp"
+                    tools:text="v1.2.3" />
+
+                <TextView
+                    android:id="@+id/app_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textAppearance="?attr/textAppearanceLabelSmall"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/ic_status_indicator"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="2dp"
+                    tools:text="Installed" />
+            </LinearLayout>
+
+            <!-- Mod Info Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mod_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceLabelSmall"
+                    
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"
+                    android:textColor="@android:color/white"
+                    tools:text="Mod v4.3.6" />
+
+                <TextView
+                    android:id="@+id/mod_features"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textAppearance="?attr/textAppearanceLabelSmall"
+                    android:textColor="?attr/colorPrimary"
+                    tools:text="Unlock Premium" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
